@@ -2,26 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer utilities {
+  .h1-bold {
+    @apply font-bold text-4xl break-words;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .h1-semibold {
+    @apply font-semibold text-4xl break-words;
+  }
+  .h2-bold {
+    @apply font-bold text-3xl break-words;
+  }
+  .h3-bold {
+    @apply font-bold text-2xl break-words;
+  }
+  .body-bold {
+    @apply text-lg font-bold break-words;
+  }
+  .body-medium {
+    @apply text-lg font-medium;
+  }
+  .base-regular {
+    @apply font-normal text-base;
+  }
+  .base-medium {
+    @apply font-medium text-base;
+  }
+  .base-semibold {
+    @apply font-semibold text-base;
+  }
+  .base-regular {
+    @apply font-normal text-base;
+  }
+  .small-regular {
+    @apply text-sm font-normal;
+  }
+  .small-medium {
+    @apply text-sm font-medium;
+  }
+  .small-semibold {
+    @apply text-sm font-semibold;
+  }
+  .subtle-regular {
+    @apply text-['12px'] font-normal;
+  }
+  .subtle-semibold {
+    @apply text-['12px'] font-semibold;
+  }
+  .tiny-medium {
+    @apply text-['10px'] font-medium;
+  }
 }
